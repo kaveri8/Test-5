@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Toggle</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        #container{
+            box-sizing: border-box;
+            border: blue;
+            width: 500px;
+            height: 500px;
+        }
+        body.dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        #toggleButton {
+            margin: 20px;
+            padding: 10px 20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+
+    <h1>Dark mode javascript plugin</h1>
+    <p>
+        theme color switch is a quick implementation of the popular dark mode on your web app
+    </p>
+    <button id="toggleButton">Toggle Dark/Light Mode</button>
+</div>
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', function() {
+            body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
